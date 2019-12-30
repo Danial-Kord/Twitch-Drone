@@ -71,7 +71,7 @@ if (Serial.available() > 0) {
   int in[3];
   int index=0;
   String temp="";
-  for(int i=command.indexOf('!');i<command.length();i++){
+  for(int i=command.indexOf('!')+1;i<command.length();i++){
     char nnow = command.charAt(i);
     if(now == ' '){
       in[index] = temp.toInt();

@@ -25,7 +25,6 @@ IEnumerator Upload() {
     form.AddField("State", "Hi its Dan");
  
     UnityWebRequest www = UnityWebRequest.Post("192.168.4.1", form);
-    print(www.SendWebRequest().ToString());
     yield return www.SendWebRequest();
  
     if(www.isNetworkError || www.isHttpError) {

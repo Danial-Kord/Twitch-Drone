@@ -345,12 +345,17 @@ PrefabInstance:
     - target: {fileID: 7936023477863955911, guid: 8e84a81a32a9dd344b1116d1994ed472,
         type: 3}
       propertyPath: _scanLineJitter
-      value: 0
+      value: 0.043
       objectReference: {fileID: 0}
     - target: {fileID: 7936023477863955911, guid: 8e84a81a32a9dd344b1116d1994ed472,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936023477863955911, guid: 8e84a81a32a9dd344b1116d1994ed472,
+        type: 3}
+      propertyPath: _colorDrift
+      value: 0.043
       objectReference: {fileID: 0}
     - target: {fileID: 7936023477863955917, guid: 8e84a81a32a9dd344b1116d1994ed472,
         type: 3}

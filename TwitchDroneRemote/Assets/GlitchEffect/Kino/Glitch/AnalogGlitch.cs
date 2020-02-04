@@ -21,6 +21,7 @@
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -30,10 +31,11 @@ namespace Kino
     [ExecuteInEditMode]
     [RequireComponent(typeof(Camera))]
     [AddComponentMenu("Kino Image Effects/Analog Glitch")]
+    
     public class AnalogGlitch : MonoBehaviour
     {
-        
-        
+
+        private float initiaValue;
         //timer
 
 
@@ -123,6 +125,11 @@ namespace Kino
             Graphics.Blit(source, destination, _material);
         }
 
+        private void Start()
+        {
+            initiaValue = scanLineJitter;
+        }
+
         public void enableAnalogeGlitch()
         {
             StartCoroutine(myGlitch());
@@ -130,7 +137,7 @@ namespace Kino
 
         private IEnumerator myGlitch()
         {
-            for (float i =0;i<1;i+=0.01f)
+            for (float i =initiaValue;i<1;i+=0.01f)
             {
                 scanLineJitter = i;
                 colorDrift = i;
